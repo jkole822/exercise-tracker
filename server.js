@@ -1,8 +1,15 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const morgan = require("morgan");
 const htmlRoutes = require("./routes/html-routes");
+const keys = require("./config/keys.js");
 
 const app = express();
+
+mongoose.connect(keys.mongoURI, {
+	useUnifiedTopology: true,
+	useNewUrlParser: true,
+});
 
 const PORT = process.env.PORT || 3000;
 
