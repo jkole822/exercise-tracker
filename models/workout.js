@@ -3,7 +3,7 @@ const Exercise = require("./exercise");
 
 const workoutSchema = new Schema({
 	exercises: [Exercise],
-	date: {
+	day: {
 		type: Date,
 		default: Date.now,
 	},
