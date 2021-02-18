@@ -14,6 +14,11 @@ router.get("/api/workouts", async (req, res) => {
 					},
 				},
 			},
+			{
+				$sort: {
+					day: 1,
+				},
+			},
 		]).exec();
 
 		res.json(workouts);
@@ -30,6 +35,19 @@ router.get("/api/workouts/range", async (req, res) => {
 					totalDuration: {
 						$sum: "$exercises.duration",
 					},
+				},
+			},
+			{
+				$sort: {
+					day: -1,
+				},
+			},
+			{
+				$limit: 7,
+			},
+			{
+				$sort: {
+					day: 1,
 				},
 			},
 		]).exec();
