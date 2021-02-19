@@ -11,6 +11,7 @@ Exercise tracker allows users to create and track daily workouts. With this appl
 ## Table of Contents
 
 - [Views](#views)
+- [Technology](#technology)
 - [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
@@ -32,6 +33,14 @@ Exercise tracker allows users to create and track daily workouts. With this appl
 ### Cardio Log
 
 ![Cardio Log](public/images/cardio-log.png)
+
+## Technology
+
+- Node
+- Express
+- MongoDB
+- Mongoose
+- Jest
 
 ## Tests
 
