@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const htmlRoutes = require("./routes/html-routes");
 const apiRoutes = require("./routes/api-routes");
 const keys = require("./config/keys.js");
+const compression = require("compression");
 const app = express();
 
 mongoose.connect(keys.mongoURI, {
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(morgan("combined"));
 app.use(htmlRoutes);
 app.use(apiRoutes);
+app.use(compression);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);
